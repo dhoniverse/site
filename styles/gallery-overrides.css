@@ -1,0 +1,37 @@
+/* gallery-overrides.css
+   Highest-priority overrides to remove all hover text / tooltips inside the gallery.
+   Add this AFTER your normal tooltip styles so it wins.
+*/
+
+/* scope to your gallery container */
+.gallery, .gallery * {
+  --disable-tooltip: 1;
+}
+
+/* hide various possible tooltip/overlay selectors used by different components */
+.gallery .tooltip-card,
+.gallery .event-tooltip,
+.gallery .image-overlay,
+.gallery .hover-content,
+.gallery .card-tooltip,
+.gallery .event-card .tooltip-card {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* defensive: if tooltip is a sibling element (img + tooltip) */
+.gallery img + .tooltip-card,
+.gallery img + .event-tooltip {
+  display: none !important;
+}
+
+/* Keep image styles unchanged (rounded, shadow etc) */
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/man-with-scars/temp_images/main/fav.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhoniverse 2025 - Cultural Festival in Palakkad</title>
+    <meta name="description" content="Cultural Festival in Palakkad, Kerala. Dec 26-28, 2025." />
+    
+    <!-- DNS Prefetch & Preconnect for GitHub CDN -->
+    <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
+    
+    <!-- Preload Critical Assets (GitHub CDN) -->
+    <link rel="preload" as="image" href="https://raw.githubusercontent.com/man-with-scars/temp_images/main/dhoniverse-logo.png" />
+    <link rel="preload" as="image" href="https://raw.githubusercontent.com/man-with-scars/temp_images/main/TDF%20WHITE.png" />
+    <link rel="preload" as="image" href="https://raw.githubusercontent.com/man-with-scars/temp_images/main/dhoniverse/Dhoniverse_front.webp" />
+    
+    <!-- Preload Divale Font -->
+    <link 
+      rel="preload" 
+      as="font" 
+      type="font/otf" 
+      href="https://raw.githubusercontent.com/man-with-scars/temp_images/main/divale/DivaleMagicalDemo-Regular.otf" 
+      crossorigin 
+    />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dhoni-dark': '#0A0E0D',
+              'dhoni-green': '#1F2E1F',
+              'dhoni-gold': '#D4AF37',
+              'dhoni-text': '#E8E6E3',
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              playfair: ['"Playfair Display"', 'serif'],
+              cinzel: ['"Cinzel"', 'serif'],
+              divale: ['"Divale"', 'serif'],
+            },
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      /* Divale Font Definition */
+      @font-face {
+        font-family: 'Divale';
+        src: url('https://raw.githubusercontent.com/man-with-scars/temp_images/main/divale/DivaleMagicalDemo-Regular.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      /* Apply Divale to ALL headings and major text elements */
+      h1, h2, h3, h4, h5, h6,
+      .font-cinzel,
+      .font-playfair,
+      button,
+      .nav-link,
+      .section-title,
+      .event-title,
+      .card-title,
+      .hero-title,
+      .footer-heading,
+      nav a,
+      .text-2xl,
+      .text-3xl,
+      .text-4xl,
+      .text-5xl,
+      .text-6xl,
+      .text-7xl,
+      .uppercase.tracking-wide,
+      .uppercase.tracking-widest {
+        font-family: 'Divale', serif !important;
+      }
+      
+      * {
+        scroll-behavior: smooth;
+      }
+      
+      .loader {
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #D4AF37 50%, #1F2E1F 50%);
+        background-size: 200% 100%;
+        animation: loaderAnim 1.5s infinite ease-in-out;
+        border-radius: 2px;
+      }
+      
+      @keyframes loaderAnim {
+        0% { background-position: 200% 0; }
+        100% { background-position: 0 0; }
+      }
+      
+      .bg-gradient-premium {
+        background: linear-gradient(135deg, rgba(10, 14, 13, 0.1) 0%, rgba(31, 46, 31, 0.3) 50%, rgba(10, 14, 13, 0.5) 100%);
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .animate-fadeIn {
+        animation: fadeIn 0.3s ease-out;
+      }
+      
+      .btn-blur {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      
+      /* Smooth scroll physics */
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <body class="bg-dhoni-dark text-dhoni-text font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="/register-sw.js"></script>
+  </body>
+</html>
